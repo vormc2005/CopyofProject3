@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
+import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';  
 import API from "../utils/API";
 import Footer from "../components/Footer/index";
 
 
-class Bid extends Component {
+class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,8 +34,10 @@ class Bid extends Component {
           results: res.data,
           buyOut: res.data.buyout
         });
+        console.log (res.dat.buyout)
       })
       .catch(err => console.log(err));
+      
   }
 
   //Functions that displays all items by category
@@ -233,4 +237,5 @@ class Bid extends Component {
   }
 }
 
-export default Bid;
+export default Cart;
+ 

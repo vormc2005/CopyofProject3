@@ -11,11 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //To use express-fileupload
 app.use(fileUpload())
-// Serve up static assets (usually on heroku)
-// app.use(express.static(path.join(__dirname, './client/build')));
-//     app.get('/', (req, res) => {
-//         res.sendFile(path.join(__dirname, './client/build/'))
-//     });
+// Serve up static assets (usua
 
 
 if (process.env.NODE_ENV === "production") {
